@@ -1,29 +1,64 @@
+theme-template
+================
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-rmds
-====
+<style type="text/css">
 
-<!-- badges: start -->
-<!-- badges: end -->
-The goal of rmds is to ...
+body{ /* Normal  */
+      font-size: 12px;
+  }
+td {  /* Table  */
+  font-size: 8px;
+}
+h1.title {
+  font-size: 38px;
+  color: #113CCF;
+}
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: #113CCF;
+}
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: #113CCF;
+}
+h3 { /* Header 3 */
+  font-size: 18px;
+  color: #113CCF;
+}
+code.r{ /* Code block */
+    font-size: 12px;
+}
+pre { /* Code block - determines code spacing between lines */
+    font-size: 14px;
+}
+</style>
+Title
+=====
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Some text might go here
+
+Sub-title
+---------
+
+Look, a plot.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+disney_blue <- '#113CCF'
+disney_tq <- '#BFF5FD'
+
+library(ggplot2)
+library(dplyr)
+
+mtcars %>%
+  ggplot() +
+  aes(x = mpg, y = wt) +
+  geom_point(col = disney_blue) +
+  theme_minimal() +
+  labs(title = 'a plot')
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+<img src="README_files/figure-markdown_github/plot-1.png" style="display: block; margin: auto;" />
 
-You can also embed plots, for example:
+### Sub-sub-title
 
-![](README_files/figure-markdown_github/pressure-1.png)
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+Maybe more text?
