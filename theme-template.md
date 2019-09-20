@@ -1,8 +1,5 @@
----
-title: "theme-template"
-output: github_document
----
-
+theme-template
+================
 
 <style type="text/css">
 
@@ -35,23 +32,17 @@ pre { /* Code block - determines code spacing between lines */
     font-size: 14px;
 }
 </style>
-
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE,
-                      fig.align = 'center')
-```
-
-# Title
+Title
+=====
 
 Some text might go here
 
-## Sub-title
+Sub-title
+---------
 
 Look, a plot.
 
-```{r plot}
+``` r
 disney_blue <- '#113CCF'
 disney_tq <- '#BFF5FD'
 
@@ -64,8 +55,9 @@ mtcars %>%
   geom_point(col = disney_blue) +
   theme_minimal() +
   labs(title = 'a plot')
-
 ```
+
+<img src="theme-template_files/figure-markdown_github/plot-1.png" style="display: block; margin: auto;" />
 
 ### Sub-sub-title
 
